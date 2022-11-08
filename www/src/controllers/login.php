@@ -1,13 +1,14 @@
 <?php
 
 LoadModel('login');
+session_start();
 $exception = null;
 
 if(count($_POST) > 0){
     $login = new Login($_POST);
     try{
         $user = $login->CheckLogin();
-        // var_dump('CheckLogin');
+        $_SESSION['user'] = $user;
         header("Location: day_records");
     } catch(AppException $e) {
         $exception = $e;
