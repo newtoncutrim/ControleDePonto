@@ -1,4 +1,8 @@
 <?php
 session_start();
 requirevalidSession();
-LoadTemplateView('day_records');
+
+$date = (new DateTime())->getTimestamp();
+$today = strftime('%d de %B de %Y', $date);
+
+LoadTemplateView('day_records', ['today' => $today]);

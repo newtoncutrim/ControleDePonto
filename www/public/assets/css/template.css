@@ -50,11 +50,11 @@ header.header .menu-toggle {
 header.header .spacer {
     flex: 1;
 }
-
+/* erro */
 header.header .dropdown {
     position: relative;
 }
-
+/* erro */
 header.header .dropdown-button {
     display: flex;
     justify-content: center;
@@ -65,6 +65,7 @@ header.header .dropdown-button {
     cursor: pointer;
 }
 
+/* erro */
 header.header .dropdown:hover .dropdown-content{
     display: block;
 }
@@ -73,6 +74,7 @@ header.header .dropdown:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* erro */
 header.header .dropdown-content {
     display: none;
     position: absolute;
@@ -81,6 +83,7 @@ header.header .dropdown-content {
     padding: 15px 0px;
     z-index: 100;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    margin-top: 135px;
 }
 
 header.header .dropdown-content ul {
@@ -103,7 +106,8 @@ header.header .dropdown-content a:hover {
 }
 
 header.header .avatar {
-    height: 75%;
+    
+    height: 70%;
     border-radius: 50%;
     margin: 0px 0px 0px 10px;
 }
