@@ -2,28 +2,28 @@
     <nav class="menu mt-3">
         <ul class="nav-list">
             <li class="nav-item">
-                <a href="day_records.php">
+                <a href="day_records">
                     <i class="icofont-ui-check mr-2">
                         Registrar ponto
                     </i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="day_records.php">
+                <a href="day_records">
                     <i class="icofont-ui-calendar mr-2">
                         Relatorio Mensal
                     </i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="day_records.php">
+                <a href="day_records">
                     <i class="icofont-chart-histogram mr-2">
                         Relatorio Gerencial
                     </i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="day_records.php">
+                <a href="day_records">
                     <i class="icofont-users mr-2">
                         Usuarios
                     </i>

@@ -61,6 +61,24 @@ class Model {
             return $result;
         }
     }
+
+    public function save() {
+        $sql = "INSERT INTO " . static::$tableName . " (" 
+        . implode(",", static::$columns) . ") VALUES (";
+        foreach(static::$columns as $col) {
+            $sql .= static::getFormatedValue($this->$col) . ",";
+        }
+        $sql[strlen($sql) - 1] = ')';
+        
+        try {
+            $id = Database::executeSQL($sql);
+            //code...
+        } catch (\Exception $th) {
+            //throw $th;
+            echo $th->getMessage();
+        }
+        $this->id = $id;
+    }
     // . static::getFormatedValue($value)
 
     private static function getFilters($filters) {
