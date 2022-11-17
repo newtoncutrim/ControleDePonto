@@ -29,4 +29,12 @@
             </a>
         </div>
     </div>
+
+    <form class="mt-5" action="innout" method="post">
+        <div class="input-group no-border">
+            <input type="text" name="forcedTime" class="form-control" placeholder="informe a hora para simular o batimento">
+            <button type="submit" class="btn btn-danger ml-3">Simular ponto</button>
+        </div>
+    </form>
+
 </main>
