@@ -1,6 +1,6 @@
 <?php
 
-date_default_timezone_get('America/Sao_Paulo');
+date_default_timezone_set('America/Bahia');
 setlocale(LC_TIME. 'pt_BR', 'pt_BR.utf-8', 'portuguese');
 
 //gerais
@@ -18,6 +18,7 @@ require_once(__DIR__ . '/database.php');
 require_once(__DIR__ . '/loader.php');
 require_once(__DIR__ . '/session.php');
 require_once(__DIR__ . '/date_utils.php');
+require_once(__DIR__ . '/utils.php');
 require_once(realpath(MODEL_PATH . '/model.php'));
 require_once(realpath(MODEL_PATH . '/user.php'));
 require_once(realpath(EXCEPTION_PATH . '/AppException.php'));

@@ -62,14 +62,13 @@ class Model {
         }
     }
 
-    public function save() {
+    public function insert() {
         $sql = "INSERT INTO " . static::$tableName . " (" 
         . implode(",", static::$columns) . ") VALUES (";
         foreach(static::$columns as $col) {
             $sql .= static::getFormatedValue($this->$col) . ",";
         }
         $sql[strlen($sql) - 1] = ')';
-        
         try {
             $id = Database::executeSQL($sql);
             //code...
@@ -80,6 +79,16 @@ class Model {
         $this->id = $id;
     }
     // . static::getFormatedValue($value)
+
+    public function update() {
+        $sql = "UPDATE " . static::$tableName . " SET ";
+        foreach(static::$columns as $col){
+            $sql .= "${col} = " . static::getFormatedValue($this->$col) . ",";
+        }
+        $sql[strlen($sql) - 1] = ' ';
+        $sql .= "WHERE id = {$this->id}";
+        Database::executeSQL($sql);
+    }
 
     private static function getFilters($filters) {
         $sql = '';
@@ -98,7 +107,7 @@ class Model {
 
     private static function getFormatedValue($value) {
         if(is_null($value)) {
-            echo 'null';
+            return 'null';
         } elseif(gettype($value) === 'string') {
             return "'${value}'";
         } else {
