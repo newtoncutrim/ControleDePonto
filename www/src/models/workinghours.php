@@ -51,6 +51,7 @@ class WorkingHours extends Model {
             throw new AppException('Voce ja fez os 4 batimentos do dia!');
         }
         $this->$timeColunm = $time;
+        $this->worked_time = getSecondsFromDateInterval($this->getWorkedInterval());
         if ($this->id) {
             $this->update();
         } else {
@@ -98,7 +99,26 @@ class WorkingHours extends Model {
         }
     }
 
-    function getTimes() {
+    public static function getMonthlyReport($userId, $date){
+        $registries = [];
+        $startDate = getFirstDayOfMonth($date)->format('Y-m-d');
+        $endDate = getLastDayOfMonth($date)->format('Y-m-d');
+
+        $result = static::getResultSetFromSelect([
+            'user_id' => $userId,
+            'raw' => "work_date between '{$startDate}' AND '{$endDate}'"
+        ]);
+
+        if($result) {
+            while($row = $result->fetch_assoc()){
+                $registries[$row['work_date']] = new WorkingHours($row);
+            }
+        }
+
+        return $registries;
+    }
+
+    private function getTimes() {
         $times = [];
 
         $this->time1 ? array_push($times, getDateFromString($this->time1)) : array_push($times, null);

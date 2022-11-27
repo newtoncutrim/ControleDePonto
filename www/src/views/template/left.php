@@ -9,7 +9,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="day_records">
+                <a href="monthly_report">
                     <i class="icofont-ui-calendar mr-2">
                         Relatorio Mensal
                     </i>

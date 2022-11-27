@@ -21,5 +21,6 @@ require_once(__DIR__ . '/date_utils.php');
 require_once(__DIR__ . '/utils.php');
 require_once(realpath(MODEL_PATH . '/model.php'));
 require_once(realpath(MODEL_PATH . '/user.php'));
+require_once(realpath(MODEL_PATH . '/WorkingHours.php'));
 require_once(realpath(EXCEPTION_PATH . '/AppException.php'));
 require_once(realpath(EXCEPTION_PATH . '/ValidateException.php'));

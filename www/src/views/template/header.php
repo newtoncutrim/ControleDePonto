@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="hide-sidebar" onclick="clicar()">
+<body cz-shortcut-listen="true">
     <header class="header">
         <div class="logo">
             <i class="icofont-travelling mr-2"></i>
@@ -31,12 +31,10 @@
 
         </div>
         <div class="dropdown">
-            <!-- aqui erro -->
             <div class="dropdown-button">
-                <img class="avatar"
-                    src="<?= "http://www.gravatar.com/avatar.php?gravatar_id=" . md5(strtolower(trim($_SESSION['user']->email)))?>" alt="user">
+                <img class="avatar" src="<?= "http://www.gravatar.com/avatar.php?gravatar_id=" . md5(strtolower(trim($_SESSION['user']->email))) ?>" alt="user">
                 <span class="ml-2">
-                    <?= $_SESSION['user']->name?>
+                    <?= $_SESSION['user']->name ?>
                 </span>
                 <i class="icofont-simple-down mx-2"></i>
                 <div class="dropdown-content">
