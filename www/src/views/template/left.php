@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="day_records">
+                <a href="manager_report">
                     <i class="icofont-chart-histogram mr-2">
                         Relatorio Gerencial
                     </i>

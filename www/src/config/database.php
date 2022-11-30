@@ -17,6 +17,7 @@ class Database
     public static function getResultFromQuerry($sql) {
         $conn = self::getConection();
         $result = $conn->query($sql);
+        
         return $result;
     }
 
