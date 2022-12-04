@@ -16,7 +16,7 @@
                         <option value="">selecione o usuario</option>
                         <?php
                         foreach ($users as $user) {
-                            $selectd = $user->id === $selectdPeriod ? 'selected' : '';
+                            $selectd = $user->id === $selectdUserId ? 'selected' : '';
                             echo "<option value='{$user->id}'{$selectd}>{$user->name}</option>";
                         }
                         ?>

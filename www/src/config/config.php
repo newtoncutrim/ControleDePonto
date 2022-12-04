@@ -1,7 +1,9 @@
 <?php
 
 date_default_timezone_set('America/Bahia');
-setlocale(LC_TIME. 'pt_BR', 'pt_BR.utf-8', 'portuguese');
+setlocale(LC_ALL, NULL);
+setlocale(LC_ALL, 'pt_BR');
+setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 
 //gerais
 define('DAILY_TIME', 60 * 60 * 8);
