@@ -21,6 +21,7 @@ function LoadTemplateView($viewName, $params = array())
         foreach ($params as $key => $value) {
             if (strlen($key) > 0) {
                 ${$key} = $value;
+            
             }
         }
     }

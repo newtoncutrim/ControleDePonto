@@ -30,4 +30,4 @@ if(count($_POST) === 0 && isset($_GET['update'])){
     }
 }
 
-LoadTemplateView('save_user', ['exception' => $exception]);
+LoadTemplateView('save_user', array_merge(['exception' => $exception], $userData));
