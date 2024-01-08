@@ -12,21 +12,11 @@ services:
       - database
   database:
     image: mysql:5.7
-    ports: 
-      - "443:443" 
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=1234
       - MYSQL_DATABASE=db
-  phpmyadmin:
-    image: phpmyadmin
-    ports:
-      - "8080:80"
-    environment:
-      - PMA_ARBITRARY=1
-      - PMA_PASSWORD=123
-       
-       
-       
+    volumes:
+      - "./mysql-init:/docker-entrypoint-initdb.d"
        #docker compose up -d --build
        #docker stop 'id ex' f31a2a675e10

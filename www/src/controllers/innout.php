@@ -19,4 +19,6 @@ try {
 } catch(AppException $e) {
     addErrorMsg($e->getMessage());
 }
+
 header('Location: day_records');
+?>
